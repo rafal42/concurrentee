@@ -17,6 +17,8 @@ defmodule ConcurrenteeWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/invoices", InvoiceController
+    post "/invoices/scan/:id", InvoiceController, :scan
   end
 
   # Other scopes may use custom stacks.

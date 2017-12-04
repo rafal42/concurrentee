@@ -11,7 +11,7 @@ defmodule Concurrentee.Entities.Invoice do
   end
 
   @doc false
-  def changeset(%Invoice{} = invoice, attrs) do
+  def changeset(%Invoice{} = invoice, attrs \\ %{}) do
     invoice
     |> cast(attrs, [:subject, :net_amount])
     |> validate_required([:subject, :net_amount])

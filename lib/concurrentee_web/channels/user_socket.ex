@@ -2,7 +2,7 @@ defmodule ConcurrenteeWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", ConcurrenteeWeb.RoomChannel
+  channel "notification:*", ConcurrenteeWeb.NotificationRoom
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

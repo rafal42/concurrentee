@@ -1,0 +1,7 @@
+<%= form_for @changeset, invoice_path(@conn, :create), fn form -> %>
+    <%= label form, :subject %>
+    <%= text_input form, :subject %>
+    <%= label form, :net_amount %>
+    <%= text_input form, :net_amount %>
+  <%= submit "Submit" %>
+<% end %>

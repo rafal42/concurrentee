@@ -1,0 +1,16 @@
+<h1>Invoices</h1>
+<div id="notifications"></div>
+<table>
+  <thead>
+    <th>Subject</th>
+    <th>Net amount</th>
+    <th>Scan</th>
+  </thead>
+  <%= for invoice <- @invoices do %>
+    <tr>
+      <td><%= invoice.subject %></td>
+      <td><%= invoice.net_amount %></td>
+      <td><%= link("Scan", to: invoice_path(@conn, :scan, invoice.id), method: :post) %></td>
+    </tr>
+  <% end %>
+</ul>
